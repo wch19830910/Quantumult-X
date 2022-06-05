@@ -1,6 +1,6 @@
-# > JS 更新时间：2022-02-15
+# > JS 更新时间：2022-06-05
 HOST, interface3.music.163.com.163jiasu.com, 网易云音乐
-#脚本地址：  https://github.com/ddgksf2013/Cuttlefish/raw/master/Rewrite/AdBlock/YoutubeAds.conf
+#脚本地址：  https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Filter/NeteaseMusic.list?token=GHSAT0AAAAAABTFLOCYZ5C2I33LMOVX2PQGYU4M6DQ
 #原始地址：  https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Filter/NeteaseMusic.list
 
 HOST,iadmat.nosdn.127.net,网易云音乐
