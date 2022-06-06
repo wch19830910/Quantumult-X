@@ -1,6 +1,6 @@
 #原始地址：https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
-#脚本地址：https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Code/iQIYI-cookie.js?token=GHSAT0AAAAAABTFLOCZRATAHXQXWW7V7DZIYU5MC3A
+#脚本地址：https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Cookie/QIYI-cookie.js?token=GHSAT0AAAAAABTFLOCZWC2UER3VF3M6RL5YYU5T2HQ
 
 
 
