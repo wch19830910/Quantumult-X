@@ -3,19 +3,21 @@
 作者：photonmang
 制作时间：2021/04/07
 
+Cookie获取方式：
+首页=>签到领学分
+
 [mitm]
 hostname = napi.zuoyebang.com
 #圈x
 [rewrite local]
-https://napi.zuoyebang.com/napi/signin/signinpage url script-request-body https://raw.githubusercontent.com/photonmang/quantumultX/master/Task/zyb.js
+https://napi.zuoyebang.com/napi/signin/signinpage url script-request-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Code/zyb.js?token=GHSAT0AAAAAABTFLOCYZQA7WAPDLK5CY722YU5JXZQ
 
-
+#原始地址：https://raw.githubusercontent.com/photonmang/quantumultX/master/Task/zyb.js
 ---------------------------------------
-Cookie获取方式：
-首页=>签到领学分
+
 
 [task_local]
-0 7 * * * https://raw.githubusercontent.com/photonmang/quantumultX/master/Task/zyb.js, tag=作业帮, img-url=https://raw.githubusercontent.com/photonmang/quantumultX/master/Task/zyb.png, enabled=true
+0 7 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Code/zyb.js?token=GHSAT0AAAAAABTFLOCYZQA7WAPDLK5CY722YU5JXZQ, tag=作业帮, img-url=https://raw.githubusercontent.com/photonmang/quantumultX/master/Task/zyb.png, enabled=true
 
 */
 
