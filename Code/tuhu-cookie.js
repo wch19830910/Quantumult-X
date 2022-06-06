@@ -1,7 +1,6 @@
 #途虎养车获取cookie：途虎APP-我的-右上角签到领积分
 #原始地址：https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.Cookie.js
-#脚本地址：
-const cookieName = '途虎养车'
+#脚本地址：https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Code/tuhu-cookie.js?token=GHSAT0AAAAAABTFLOCYA5VSBWUFSBTGDSHGYU5KF3Qconst cookieName = '途虎养车'
 const signurlKey = 'photonmang_signurl_tuhu'
 const signheaderKey = 'photonmang_signheader_tuhu'
 const photonmang = init()
