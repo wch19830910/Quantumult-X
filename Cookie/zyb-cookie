@@ -11,10 +11,10 @@ Cookie获取方式：
 hostname = napi.zuoyebang.com
 #圈x
 [rewrite local]
-https://napi.zuoyebang.com/napi/signin/signinpage url script-request-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Code/zyb-cookie.js?token=GHSAT0AAAAAABTFLOCYSGRPS3T3U6NJORJ6YU5KAHQ
+https://napi.zuoyebang.com/napi/signin/signinpage url script-request-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Cookie/zyb-cookie?token=GHSAT0AAAAAABTFLOCYV4S5U67PKHYXCEHIYU5T67Q
 
 [task_local]
-0 7 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Code/zyb-cookie.js?token=GHSAT0AAAAAABTFLOCYSGRPS3T3U6NJORJ6YU5KAHQ, tag=作业帮, img-url=https://raw.githubusercontent.com/photonmang/quantumultX/master/Task/zyb.png, enabled=true
+0 7 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Cookie/zyb-cookie?token=GHSAT0AAAAAABTFLOCYV4S5U67PKHYXCEHIYU5T67Q, tag=作业帮, img-url=https://raw.githubusercontent.com/photonmang/quantumultX/master/Task/zyb.png, enabled=true
 
 */
 
