@@ -1,6 +1,6 @@
 #原始地址：https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
-#脚本地址：https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Cookie/QIYI-cookie.js?token=GHSAT0AAAAAABTFLOCZWC2UER3VF3M6RL5YYU5T2HQ
+#脚本地址：https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Cookie/QIYI-cookie.js
 
 
 
@@ -43,11 +43,11 @@ QuantumultX 远程脚本配置:
 **********************
 [task_local]
 # 爱奇艺会员签到
-0 9 * * * https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+0 9 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Cookie/QIYI-cookie.js
 
 [rewrite_local]
 # 获取Cookie
-^https:\/\/passport\.iqiyi\.com\/apis\/user\/info\.action url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+^https:\/\/passport\.iqiyi\.com\/apis\/user\/info\.action url script-request-header https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Cookie/QIYI-cookie.js
 
 [mitm]
 hostname= passport.iqiyi.com
