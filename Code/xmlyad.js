@@ -1,4 +1,5 @@
 /*v0.0.9*/
+#https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/xmlyad.js
 const scriptName = "XiMaLaYa";
 const author = "ddgksf2013";
 let magicJS = MagicJS(scriptName, "INFO");
