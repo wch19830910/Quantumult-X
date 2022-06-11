@@ -1,5 +1,9 @@
 /*v0.0.9*/
 #https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/xmlyad.js
+/*
+v0.0.18
+https://t.me/ddgksf2021
+*/
 const scriptName = "XiMaLaYa";
 const author = "ddgksf2013";
 let magicJS = MagicJS(scriptName, "INFO");
@@ -13,8 +17,7 @@ let magicJS = MagicJS(scriptName, "INFO");
         try {
 			let obj = JSON.parse(magicJS.response.body);
 			if(obj.focusImages&&obj.focusImages.data){
-				obj.focusImages.data = obj.focusImages.data.filter((i) => !(i.isAd));
-				obj.focusImages.data = obj.focusImages.data.filter((i) => !(i.realLink.indexOf("open")==-1));
+				obj.focusImages.data = obj.focusImages.data.filter((i) => (!(i.realLink.indexOf("open")==-1)&&!i.isAd));
 			}
 			body = JSON.stringify(obj);
         } catch (err) {
@@ -26,7 +29,7 @@ let magicJS = MagicJS(scriptName, "INFO");
         try {
 		let obj = JSON.parse(magicJS.response.body);
 		if(obj.header&&obj.header.length>=1){
-			obj.header[0].item.list[0].data = obj.header[0].item.list[0].data.filter((i) => !(i.realLink.indexOf("open")==-1));
+			obj.header[0].item.list[0].data = obj.header[0].item.list[0].data.filter((i) => (!(i.realLink.indexOf("open")==-1)&&!i.isAd));
 		}
 		const tabList = new Set([1001,1009,1013,1015,100000]);
 		if(obj.header&&obj.header.length>=2){
@@ -37,7 +40,7 @@ let magicJS = MagicJS(scriptName, "INFO");
 			obj.header[1].item.list[k].displayClass="one_line";
 			}
 		}
-		obj.body = obj.body.filter((i) => !(i.item.subscribeCount<100000));
+		obj.body = obj.body.filter((i) => (i.item.playsCounts>1000000&&!i.item.adInfo));
 		
 		body = JSON.stringify(obj);
         } catch (err) {
