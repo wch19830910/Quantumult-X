@@ -1,4 +1,5 @@
 //参考@yichahucha 的脚本
+//https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
 
 const launchAdUrl1 = '/interface/sdk/sdkad.php';
 const launchAdUrl2 = '/wbapplua/wbpullad.lua';
