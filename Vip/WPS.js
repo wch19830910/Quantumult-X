@@ -10,7 +10,9 @@
 *******************************
 [rewrite_local]
 # > WPS解锁稻壳会员
-^https?:\/\/account\.wps\.cn\/api\/users url script-response-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Vip/WPS.js
+;^https?:\/\/account\.wps\.cn\/api\/users url script-response-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Vip/WPS.js
+
+
 [mitm] 
 hostname = *.docer.wps.cn, vipapi.wps.cn, account.wps.cn
 
