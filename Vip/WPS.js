@@ -3,14 +3,14 @@
 下载地址：http://t.cn/A6ZD2hl3
 脚本作者：Hausd0rff
 更新时间：2022-07-05
-脚本发布：https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Vip/WPSDocerVIPuserCrack.js
+脚本发布：https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Vip/WPS.js
 问题反馈：https://t.me/yqc_777
 使用声明：⚠️此脚本仅供学习与交流，
         请勿转载与贩卖！⚠️⚠️⚠️
 *******************************
 [rewrite_local]
 # > WPS解锁稻壳会员
-^https?:\/\/account\.wps\.cn\/api\/users url script-response-body 
+^https?:\/\/account\.wps\.cn\/api\/users url script-response-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Vip/WPS.js
 [mitm] 
 hostname = *.docer.wps.cn, vipapi.wps.cn, account.wps.cn
 
