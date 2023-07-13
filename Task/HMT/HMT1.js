@@ -32,7 +32,7 @@ function sign() {
     let detail = ''
     const result = JSON.parse(data)
     if (result.ret == 0) {
-      subTitle = `签到结果: 签到成功`
+      subTitle = `签到结果: ✅签到成功`
       detail += `已连续签到: ${result.data.continue_days}天, 再签到: ${result.data.package_before_days}天可获得红包`
     } else if (result.ret ==1 ) {
       subTitle = '签到结果: 成功 (重复签到)'
