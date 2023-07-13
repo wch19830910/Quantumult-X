@@ -8,6 +8,8 @@ cookie获取:打开app，我的，点击等级获取成功，即可注释点cook
 [task_local]
 11 0 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/HMT/HMT1.js, tag=鹤鸣亭签到, img-url=https://raw.githubusercontent.com/wch19830910/wch/main/PNG/HMT.JPG, enabled=true
 12 0 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/HMT/HMT2.js, tag=鹤鸣亭签到日志, img-url=https://raw.githubusercontent.com/wch19830910/wch/main/PNG/HMT.JPG, enabled=true
+
+hostname = qfapi.hmting.com
 */
 
 const cookieName = '鹤鸣亭'
@@ -20,7 +22,7 @@ if ($request && $request.method != 'OPTIONS') {
   const signheaderVal = JSON.stringify($request.headers)
   if (signurlVal) photonmang.setdata(signurlVal, signurlKey)
   if (signheaderVal) photonmang.setdata(signheaderVal, signheaderKey)
-  photonmang.msg(cookieName, `获取Cookie: 成功`, ``)
+  photonmang.msg(cookieName, `获取Cookie: ✅成功`, ``)
 }
 
 function init() {
