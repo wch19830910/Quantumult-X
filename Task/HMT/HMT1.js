@@ -26,7 +26,7 @@ function sign() {
       detail += `❎: ${result.text}`
       } else {
       subTitle = '签到结果: 失败'
-      detail = `编码: ${result.code}, 说明: ${result.msg}`
+      detail = `编码: ${result.text}, 说明: ${result.msg}`
       }
        
     photonmang.msg(title, subTitle, detail)
