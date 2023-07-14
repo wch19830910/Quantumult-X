@@ -1,15 +1,15 @@
 /*
 
-cookie获取:打开app，我的，点击等级获取成功，即可注释点cookie获取脚本
+cookie获取:打开app，我的，点击任务中心，获取成功，即可注释点cookie获取脚本
 [rewrite_local]
-#获取鹤鸣亭Cookie
-^https:\/\/app\.myyancheng\.com\.cn\/api\/secretary\/points\/fineCulture url script-request-header https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/HMT/HMTCK.js
+#小猿搜题Cookie
+^https:\/\/xyst\.yuanfudao\.com\/solar-bonus\/api\/checkin\/config\?_productId=241&_appId=201 url script-request-header https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/XYST/XYSTCK.js
 
 [task_local]
 11 0 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/HMT/HMT1.js, tag=鹤鸣亭签到, img-url=https://raw.githubusercontent.com/wch19830910/wch/main/PNG/HMT.JPG, enabled=true
 12 0 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/HMT/HMT2.js, tag=鹤鸣亭签到日志, img-url=https://raw.githubusercontent.com/wch19830910/wch/main/PNG/HMT.JPG, enabled=true
 
-hostname = app.myyancheng.com.cn
+hostname = xyst.yuanfudao.com
 */
 
 const cookieName = '小猿搜题'
