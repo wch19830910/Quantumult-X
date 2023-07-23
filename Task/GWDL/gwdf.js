@@ -70,7 +70,7 @@ $.body = $.read("evil_billBody");
     .finally(() => $.done());
 
 function checkin() {
-    const url = `http://weixin.js.sgcc.com.cn/ott//app/elec/account/query`;
+    const url = `https://weixin.js.sgcc.com.cn/wxapp_dlsh/infomerge/infomerge_getMergeStatus.do`;
     const headers = {
         'X-Requested-With': `XMLHttpRequest`,
         'Connection': `keep-alive`,
@@ -80,7 +80,7 @@ function checkin() {
         'User-Agent': `Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.30(0x18001e2e) NetType/WIFI Language/zh_CN`,
         'Cookie': $.cookie,
         'Host': `weixin.js.sgcc.com.cn`,
-        'Referer': `http://weixin.js.sgcc.com.cn/ott/html/service/surplus.html`,
+        'Referer': `http://weixin.js.sgcc.com.cn`,
         'Accept-Language': `zh-CN,zh-Hans;q=0.9`,
         'Accept': `application/json, text/javascript, */*; q=0.01`
     };
