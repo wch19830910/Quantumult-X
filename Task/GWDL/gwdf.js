@@ -25,10 +25,10 @@
 【Quantumult X】
 -----------------
 [rewrite_local]
-http:\/\/weixin.js.sgcc.com.cn\/ott\/\/app\/elec\/account\/query url script-request-body https://raw.githubusercontent.com/evilbutcher/QuantumultX/master/check_in/energybill/bill.js
+http:\/\/weixin.js.sgcc.com.cn\/ott\/\/app\/elec\/account\/query url script-request-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/GWDL/gwdf.js
 
 [task_local]
-5 0 * * * https://raw.githubusercontent.com/evilbutcher/QuantumultX/master/check_in/energybill/bill.js, tag=国网电费
+5 0 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/GWDL/gwdf.js, tag=国网电费
 
 【All App MitM】
 hostname = weixin.js.sgcc.com.cn
