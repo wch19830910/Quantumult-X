@@ -3,7 +3,7 @@
 cookie获取:Safari浏览器输入网址http://www.txtnovel.vip登录后点击我的，获取成功，即可注释点cookie获取脚本
 [rewrite_local]
 #书香门第Cookie
-^http:\/\/www\.txtnovel\.vip\/home\.php\?mod=space&uid=4323223&do=profile&mobile=yes url script-request-header https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/HMT/HMTCK.js
+^http:\/\/www\.txtnovel\.vip\/home\.php\?mod=space&uid=4323223&do=profile&mobile=yes url script-request-header https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/www.txtnovel.vip/sxmdck.js
 
 [task_local]
 11 0 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/HMT/HMT1.js, tag=鹤鸣亭签到, img-url=https://raw.githubusercontent.com/wch19830910/wch/main/PNG/HMT.JPG, enabled=true
