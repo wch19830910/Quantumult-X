@@ -1,14 +1,12 @@
 /**************************************
-作者:Zoo
-日期:2024.02.05
-整合途虎养车app小程序积分签到
+
 cookie获取:公众号搜索途虎小程序登录
 [rewrite_local]
 
-http://www.txtnovel.vip/home.php?mod=space&uid=4323223&do=profile&mobile=yes url script-request-header https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
+http://www.txtnovel.vip/home.php?mod=space&uid=4323223&do=profile&mobile=yes url script-request-header https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/www.txtnovel.vip/sxmd.js
 
 [task_local]
-40 8 * * * https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js, tag=途虎养车积分签到, img-url=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Image/IMG_0905.jpeg, enabled=true
+40 8 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/www.txtnovel.vip/sxmd.js, tag=书香门第签到,
 [MITM]
 hostname = www.txtnovel.vip
 *****************************************/
