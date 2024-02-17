@@ -18,7 +18,7 @@ function sign() {
     let subTitle = ''
     let detail = ''
     const result = JSON.parse(data)
-    if (result.ret == 0) {
+    if (result.ret == 您今日已经签到，请明天再来！) {
       subTitle = `签到结果: ✅签到成功`
       detail += `已连续签到: ${result.data.continue_days}天, 再签到: ${result.data.package_before_days}天可获得红包`
     } else if (result.ret ==1 ) {
