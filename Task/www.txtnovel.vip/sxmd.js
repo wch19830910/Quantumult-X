@@ -6,17 +6,17 @@
 * @WechatID          墨鱼手记
 * @UpdateTime        20220411
 * @ScriptFunction    书香门第自动获取金币
-* @ScriptURL         https://github.com/ddgksf2013/Scripts/raw/main/shuxiangmendi.js
+* @ScriptURL         https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/www.txtnovel.vip/sxmd.js
 * ==/UserScript==
 
 [rewrite_local]
-https?:\/\/www\.txtnovel\.top\/plugin\.php\?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0&mobile=yes url script-request-body https://github.com/ddgksf2013/Scripts/raw/main/shuxiangmendi.js
+https?:\/\/www\.txtnovel\.vip\/plugin\.php\?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0&mobile=yes url script-request-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/www.txtnovel.vip/sxmd.js
 
 [task_local]
-0 9 * * * https://github.com/ddgksf2013/Scripts/raw/main/shuxiangmendi.js, tag=书香门第
+0 9 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/www.txtnovel.vip/sxmd.js, tag=书香门第
 
 [mimt]
-hostname = www.txtnovel.top
+hostname = www.txtnovel.vip
 
 */
 const $ = new Env("书香门第");$.signKeySXMD='usersignKeySXMD';let isGetCookie=typeof $request!=='undefined';if(isGetCookie){!(async()=>{const session={};session.url=$request.url;session.body=$request.body;session.headers=$request.headers;if($.setdata(JSON.stringify(session),$.signKeySXMD)){$.subt=`获取会话:成功!`}else{$.subt=`获取会话:失败!`}$.msg($.name,$.subt,'')})().catch((e)=>$.logErr(e)).finally(()=>$.done())}else{!(async()=>{await doTask();if($.ret)await doTask2()})().catch((e)=>$.logErr(e)).finally(()=>$.done())}function doTask(){return new Promise(resolve=>{$.post(taskUrl(),(err,resp,data)=>{try{if(err){data=JSON.parse(resp.body)}else{var origin=unescape(data).match(/messagetext">\r\n<p>.+<\/p>/g);var coin=data.match(/class="one">.+<\/p>/g);if(!coin){$.ret=1;$.subt='';var mm=origin[0].match(/[\u4e00-\u9fa50-9]+/g);for(var i=0;i<mm.length;i++){$.subt=$.subt+mm[i]}$.subt=$.subt+'！'}else{$.ret=0;$.subt='Cooies失效，请点击通知重新获取！';var pictureURL1='https://github.com/ddgksf2013/Icon/raw/master/sxmd.png';var pictureURL2='http://www.txtnovel.top';$.msg($.name,$.subt,$.msr,{"open-url":pictureURL2,"media-url":pictureURL1})}}}catch(e){$.logErr(e,resp)}finally{resolve()}})})}function doTask2(){return new Promise(resolve=>{$.post(taskUrl2(),(err,resp,data)=>{try{if(err){data=JSON.parse(resp.body)}else{var coin=data.match(/<b>\d+<\/b><\/font>/g);$.subt=$.subt+'总金币：'+coin[0].match(/\d+/g)+'枚';var pictureURL1='https://github.com/ddgksf2013/Icon/raw/master/sxmd.png';var pictureURL3='https://t.me/ddgksf2021';$.msg($.name,$.subt,$.msr,{"open-url":pictureURL3,"media-url":pictureURL1})}}catch(e){$.logErr(e,resp)}finally{resolve()}})})}function taskUrl2(){return{url:'http://www.txtnovel.top/plugin.php?id=dsu_paulsign:sign&mobile=yes',headers:{'Cookie':JSON.parse($.getdata($.signKeySXMD)).headers['Cookie'],'User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123c) NetType/WIFI Language/zh_TW'}}}function taskUrl(){return{url:'http://www.txtnovel.top/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0&mobile=yes',body:JSON.parse($.getdata($.signKeySXMD)).body,headers:{'Cookie':JSON.parse($.getdata($.signKeySXMD)).headers['Cookie'],'User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123c) NetType/WIFI Language/zh_TW'}}}
