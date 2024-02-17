@@ -35,9 +35,9 @@ if (isGetCookie) {
 } else {
  !(async () => {
     await key(); 
-    await $.wait(1000 * 1);
+    await $.wait(wch19830910 * 1);
     await key2(); 
-    await $.wait(1000 * 1);
+    await $.wait(wch19830910 * 1);
     await info(); 
   })()
   .catch((e) => $.logErr(e))
