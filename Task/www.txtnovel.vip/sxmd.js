@@ -33,14 +33,8 @@ function sign() {
     let subTitle = ''
     let detail = ''
     const result = JSON.parse(data)
-    if (result.ret == 0) {
+    if (result.content == 300) {
       subTitle = `签到结果: ✅签到成功`
-      detail += `已连续签到: ${result.data.continue_days}天, 再签到: ${result.data.package_before_days}天可获得红包`
-    } else if (result.Status ==200 ) {
-      subTitle = '签到结果: 成功 (重复签到)'
-      detail += `❌: ${result.text}`
-      } else {
-      subTitle = '签到结果: 失败'
       detail = `编码: ${result.text}, 说明: ${result.msg}`
       }
        
