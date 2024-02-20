@@ -2,13 +2,15 @@
 
 cookie获取:打开app，我的，点击等级获取成功，即可注释点cookie获取脚本
 [rewrite_local]
-#获取作业帮Cookie
-^https:\/\/napi\.zuoyebang\.com\/napi\/signin\/checkin url script-request-header https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/zuoyebang/zyb.js
+#获取鹤鸣亭Cookie
+^https:\/\/qfapi\.hmting\.com\/store\/grade\/grade-list url script-request-header https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/HMT/HMTCK.js
 
-hostname = napi.zuoyebang.com
+[task_local]
+11 0 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/HMT/HMT1.js, tag=鹤鸣亭签到, img-url=https://raw.githubusercontent.com/wch19830910/wch/main/PNG/HMT.JPG, enabled=true
+12 0 * * * https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/HMT/HMT2.js, tag=鹤鸣亭签到日志, img-url=https://raw.githubusercontent.com/wch19830910/wch/main/PNG/HMT.JPG, enabled=true
 
+hostname = qfapi.hmting.com
 */
-
 
 const cookieName = '作业帮'
 const signurlKey = 'photonmang_signurl_ZYB'
@@ -22,7 +24,7 @@ sign()  //签到
 
 
 function sign() {
-  const url = { url: `https://napi.zuoyebang.com/napi/signin/checkin`, body: JSON.parse(signheaderVal) }
+  const url = { url: `https://napi.zuoyebang.com/napi/signin/checkin`, headers: JSON.parse(signheaderVal) }
   url.body = '{}'
   photonmang.post(url, (error, response, data) => {
     photonmang.log(`${cookieName}, data: ${data}`)
@@ -32,13 +34,13 @@ function sign() {
     const result = JSON.parse(data)
     if (result.errstr == success) {
       subTitle = `签到结果: ✅签到成功`
-      detail += `本月签到: ${result.special_days}天`
-    } else if (result.checkin_status ==1 ) {
+      detail += `本月签到: ${result.special_days}天, `
+    } else if (result.checkin_status == 0) {
       subTitle = '签到结果: 成功 (重复签到)'
-      detail += `❌: ${result.text}`
+      detail = `说明: ${result.msg}`
       } else {
       subTitle = '签到结果: 失败'
-      detail = `编码: ${result.text}, 说明: ${result.msg}`
+      detail = `编码: ${result.code}, 说明: ${result.msg}`
       }
        
     photonmang.msg(title, subTitle, detail)
