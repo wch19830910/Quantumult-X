@@ -32,7 +32,7 @@ function sign() {
     let subTitle = ''
     let detail = ''
     const result = JSON.parse(data)
-    if (result.data.errstr == success) {
+    if (result.data.errstr != success) {
       subTitle = `签到结果: ✅签到成功`
     }  else {
       subTitle = '签到结果: 失败'
