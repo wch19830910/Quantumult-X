@@ -34,11 +34,7 @@ function sign() {
     const result = JSON.parse(data)
     if (result.data.errstr == success) {
       subTitle = `签到结果: ✅签到成功`
-      detail += `本月签到: ${result.special_days}天, `
-    } else if (result.data.checkin_status == 0) {
-      subTitle = '签到结果: 成功 (重复签到)'
-      detail = `说明: ${result.msg}`
-      } else {
+    }  else {
       subTitle = '签到结果: 失败'
       detail = `编码: ${result.code}, 说明: ${result.msg}`
       }
