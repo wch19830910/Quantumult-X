@@ -22,7 +22,7 @@ sign()  //签到
 
 
 function sign() {
-  const url = { url: `https://qfapi.hmting.com/store/assign/sign`, headers: JSON.parse(signheaderVal) }
+  const url = { url: `https://napi.zuoyebang.com/napi/signin/checkin`, headers: JSON.parse(signheaderVal) }
   url.body = '{}'
   photonmang.post(url, (error, response, data) => {
     photonmang.log(`${cookieName}, data: ${data}`)
