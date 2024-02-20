@@ -11,14 +11,14 @@ hostname = napi.zuoyebang.com
 const cookieName = '作业帮'
 const signurlKey = 'photonmang_signurl_ZYB'
 const signheaderKey = 'photonmang_signheader_ZYB'
-const photonmang = init()
+const aphotonmang = init()
 
 if ($request && $request.method != 'success') {
   const signurlVal = $request.url
   const signheaderVal = JSON.stringify($request.headers)
-  if (signurlVal) photonmang.setdata(signurlVal, signurlKey)
-  if (signheaderVal) photonmang.setdata(signheaderVal, signheaderKey)
-  photonmang.msg(cookieName, `获取Cookie: ✅成功`, ``)
+  if (signurlVal) aphotonmang.setdata(signurlVal, signurlKey)
+  if (signheaderVal) aphotonmang.setdata(signheaderVal, signheaderKey)
+  aphotonmang.msg(cookieName, `获取Cookie: ✅成功`, ``)
 }
 
 function init() {
@@ -64,4 +64,4 @@ function init() {
   }
   return { isSurge, isQuanX, msg, log, getdata, setdata, get, post, done }
 }
-photonmang.done()
+aphotonmang.done()
