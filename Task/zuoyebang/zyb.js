@@ -30,7 +30,7 @@ function sign() {
     let subTitle = ''
     let detail = ''
     const result = JSON.parse(data)
-    if (result.toast == 签到成功) {
+    if (result.errstr == success) {
       subTitle = `签到结果: ✅签到成功`
       detail += `本月签到: ${result.special_days}天`
     } else if (result.checkin_status ==1 ) {
