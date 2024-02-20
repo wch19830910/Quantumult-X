@@ -3,7 +3,7 @@
 cookie获取:打开app，我的，点击等级获取成功，即可注释点cookie获取脚本
 [rewrite_local]
 #获取作业帮Cookie
-^https:\/\/napi\.zuoyebang\.com\/napi\/signin\/checkin url script-request-header https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/zuoyebang/zybck.js
+^https:\/\/napi\.zuoyebang\.com\/napi\/signin\/checkin url script-request-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/zuoyebang/zybck.js
 
 
 
