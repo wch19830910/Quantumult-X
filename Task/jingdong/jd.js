@@ -1,67 +1,19 @@
-const $ = new Tool('手机京东');
+const $ = new Tool('京东');
 
 try {
-    const { headers, method, url, body } = $request;
-    const { Cookie, Authorization } = headers;
-    if (method === 'POST') {
-        // 刷新Cookie过期时间的接口
-        if (url.includes('https://api.m.jd.com')) {
-            if (!Authorization) {
-                $.log(`获取Cookie失败：${JSON.stringify(headers)}`);
-                $.notify(`Cookie获取失败！`);
-            } else {
-                $.setStore('MJD_URL_REFRESH', url);
-                $.setStore('MJD_BODY_REFRESH', body);
-                $.setStore('MJD_HEADERS_REFRESH', headers);
-                $.log(
-                    `headers：${JSON.stringify(
-                        headers
-                    )}\nurl：${url}\nbody：${body}`
-                );
-            }
-        } else {
-            if (!Cookie || !Authorization) {
-                $.log(`获取Cookie失败：${JSON.stringify(headers)}`);
-                $.notify(`Cookie获取失败！`);
-            } else {
-                const bodyArr = decodeURIComponent(body).split('&');
-                const params = {};
-                for (let i = 0; i < bodyArr.length; i++) {
-                    const item = bodyArr[i];
-                    const keyVal = item.split('=');
-                    params[keyVal[0]] = keyVal[1];
-                }
-                $.setStore('MJD_URL', url);
-                $.setStore('MJD_BODY', params);
-                $.setStore('MJD_HEADERS', headers);
-                $.log(
-                    `headers：${JSON.stringify(
-                        headers
-                    )}\nurl：${url}\nparams：${JSON.stringify(params)}`
-                );
-            }
-        }
-        let WPH_URL = $.getStore('MJD_URL');
-        let WPH_BODY = $.getStore('MJD_BODY');
-        let WPH_HEADERS = $.getStore('MJD_HEADERS');
-        let WPH_URL_REFRESH = $.getStore('MJD_URL_REFRESH');
-        let WPH_BODY_REFRESH = $.getStore('MJD_BODY_REFRESH');
-        let WPH_HEADERS_REFRESH = $.getStore('MJD_HEADERS_REFRESH');
-        if (
-            MJD_URL &&
-            MJD_BODY &&
-            MJD_HEADERS &&
-            MJD_URL_REFRESH &&
-            MJD_BODY_REFRESH &&
-            MJD_HEADERS_REFRESH
-        ) {
-            $.notify(`Cookie写入成功！`);
-        }
+    const { headers, url } = $request;
+    const { Cookie } = headers;
+    if (!Cookie) {
+        $.log(`获取Cookie失败：${JSON.stringify(headers)}`);
+        $.notify(`Cookie获取失败！`);
+    } else {
+        $.setStore('JD_URL', url);
+        $.setStore('JD_HEADERS', headers);
+        $.log(`headers：${JSON.stringify(headers)}\nurl：${url}`);
+        $.notify(`Cookie写入成功！`);
     }
 } catch (error) {
-    $.log(
-        `Error：\n${typeof error === 'object' ? JSON.stringify(error) : error}`
-    );
+    $.log(`Error：\n${error}\n${JSON.stringify(error)}`);
 }
 $.done();
 
