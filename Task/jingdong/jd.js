@@ -5,7 +5,7 @@ try {
     const { Cookie, Authorization } = headers;
     if (method === 'POST') {
         // 刷新Cookie过期时间的接口
-        if (url.includes('https://pro.m.jd.com')) {
+        if (url.includes('https://api.m.jd.com')) {
             if (!Authorization) {
                 $.log(`获取Cookie失败：${JSON.stringify(headers)}`);
                 $.notify(`Cookie获取失败！`);
