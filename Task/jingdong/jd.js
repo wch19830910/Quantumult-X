@@ -3,7 +3,7 @@ const signurlKey = 'photonmang_signurl_MJD'
 const signheaderKey = 'photonmang_signheader_MJD'
 const photonmang = init()
 
-if ($request && $request.method != 'success, not hit tips') {
+if ($request && $request.method != 'success') {
   const signurlVal = $request.url
   const signheaderVal = JSON.stringify($request.headers)
   if (signurlVal) photonmang.setdata(signurlVal, signurlKey)
