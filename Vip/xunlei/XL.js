@@ -15,7 +15,7 @@ TG频道群：https://t.me/py996
 
 *******************************
 
-https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/xunlei.js
+https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-response-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Vip/xunlei/XL.js
 
 
 hostname = xluser-ssl.xunlei.com
