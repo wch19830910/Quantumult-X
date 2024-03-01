@@ -16,7 +16,7 @@ TG频道群：https://t.me/py
 
 [rewrite_local]
 
-^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/documents.js
+^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Vip/documents/documents.js
 
 [mitm] 
 
