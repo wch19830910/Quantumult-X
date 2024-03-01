@@ -15,7 +15,7 @@ TG频道群：https://t.me/py996
 
 [rewrite_local]
 
-^http[s]?:\/\/idp2api.netpock.com\/api\/user_info url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/yczjz.js
+^http[s]?:\/\/idp2api.netpock.com\/api\/user_info url script-response-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Vip/zhengjianzhao/ZJZ.js
 
 [mitm] 
 
