@@ -10,14 +10,13 @@ QQ会员群：779392027💞
 TG反馈群：https://t.me/plus8889
 TG频道群：https://t.me/py
 使用声明：此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
-
+转入时间：2024 年 03 月 01 日 16:16:26
 
 *******************************
 
 [rewrite_local]
 
-^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/bdwk.js
-
+^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Vip/baiduwenku/BDWK.js
 [mitm]
 
 hostname = appwk.baidu.com
