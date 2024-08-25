@@ -7,7 +7,7 @@
   "apps": [
     {
       "id": "Caiyun",
-      "name": "彩云天气",
+      "name": "自用彩云天气",
       "keys": [
         "@caiyun.token.caiyun",
         "@caiyun.token.tencent",
