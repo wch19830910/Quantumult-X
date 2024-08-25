@@ -20,11 +20,10 @@
         {
           "id": "@caiyun.token.caiyun",
           "name": "彩云天气API Token",
-          "val": null,
+          "val": "Rw1oswalZSKOB41T",
           "type": "text",
-          "autoGrow": false,
           "rows": 2,
-          "desc": "彩云天气的Token，可以自行申请或者前往频道获取"
+          "desc": ""
         },
         {
           "id": "@caiyun.token.tencent",
@@ -37,21 +36,21 @@
         {
           "id": "@caiyun.display_location",
           "name": "是否在日志中显示经纬度",
-          "val": false,
+          "val": true,
           "type": "boolean",
           "desc": ""
         },
         {
           "id": "@caiyun.location.latitude",
           "name": "纬度",
-          "val": null,
+          "val": "33.390536",
           "type": "text",
           "desc": "纬度，可以关闭MITM获取位置，手动设置"
         },
         {
           "id": "@caiyun.location.longitude",
           "name": "经度",
-          "val": null,
+          "val": "120.197358",
           "type": "text",
           "desc": "经度，可以关闭MITM获取位置，手动设置"
         }
