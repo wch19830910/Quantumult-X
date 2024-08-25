@@ -7,7 +7,7 @@
   "apps": [
     {
       "id": "Caiyun",
-      "name": "自用彩云天气",
+      "name": "彩云天气",
       "keys": [
         "@caiyun.token.caiyun",
         "@caiyun.token.tencent",
@@ -20,10 +20,11 @@
         {
           "id": "@caiyun.token.caiyun",
           "name": "彩云天气API Token",
-          "val": "Rw1oswalZSKOB41T",
+          "val": null,
           "type": "text",
+          "autoGrow": false,
           "rows": 2,
-          "desc": ""
+          "desc": "彩云天气的Token，可以自行申请或者前往频道获取"
         },
         {
           "id": "@caiyun.token.tencent",
@@ -36,27 +37,26 @@
         {
           "id": "@caiyun.display_location",
           "name": "是否在日志中显示经纬度",
-          "val": true,
+          "val": false,
           "type": "boolean",
           "desc": ""
         },
         {
           "id": "@caiyun.location.latitude",
           "name": "纬度",
-          "val": "33.390536",
+          "val": null,
           "type": "text",
           "desc": "纬度，可以关闭MITM获取位置，手动设置"
         },
         {
           "id": "@caiyun.location.longitude",
           "name": "经度",
-          "val": "120.197358",
+          "val": null,
           "type": "text",
           "desc": "经度，可以关闭MITM获取位置，手动设置"
         }
       ],
-      
-      "script": "https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/caiyun.js"
+    "script": "https://raw.githubusercontent.com/wch19830910/Quantumult-X/main/Task/caiyun.js"
     }
     
   ]
