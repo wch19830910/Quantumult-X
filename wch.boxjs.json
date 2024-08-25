@@ -1,0 +1,64 @@
+{
+  "id": "wch.app.sub",
+  "name": "Merry 应用订阅",
+  "author": "@wch19830910",
+  "icon": "https://www.imerry.top:13000/wch19830910/Former-Years-icon/raw/branch/master/hdcj.png",
+  "repo": "https://github.com/wch19830910/Quantumult-X",
+  "apps": [
+    {
+      "id": "Caiyun",
+      "name": "彩云天气",
+      "keys": [
+        "@caiyun.token.caiyun",
+        "@caiyun.token.tencent",
+        "@caiyun.display_location",
+        "@caiyun.location.latitude",
+        "@caiyun.location.longitude",
+        "@caiyun.address"
+      ],
+      "settings": [
+        {
+          "id": "@caiyun.token.caiyun",
+          "name": "彩云天气API Token",
+          "val": null,
+          "type": "text",
+          "autoGrow": false,
+          "rows": 2,
+          "desc": "彩云天气的Token，可以自行申请或者前往频道获取"
+        },
+        {
+          "id": "@caiyun.token.tencent",
+          "name": "腾讯地图API Token",
+          "val": "AHEBZ-ASTWX-CIW4P-7TV7T-AWKLS-7CFWP",
+          "type": "text",
+          "rows": 1,
+          "desc": ""
+        },
+        {
+          "id": "@caiyun.display_location",
+          "name": "是否在日志中显示经纬度",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "@caiyun.location.latitude",
+          "name": "纬度",
+          "val": null,
+          "type": "text",
+          "desc": "纬度，可以关闭MITM获取位置，手动设置"
+        },
+        {
+          "id": "@caiyun.location.longitude",
+          "name": "经度",
+          "val": null,
+          "type": "text",
+          "desc": "经度，可以关闭MITM获取位置，手动设置"
+        }
+      ],
+      
+      "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js"
+    }
+    
+  ]
+}
